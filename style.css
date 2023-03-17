@@ -109,3 +109,12 @@ nav ul {
 .book {
     margin-bottom:100px;
 }
+
+@media only screen and (max-width: 768px) {
+    .page {
+        padding: 0;
+    }
+    .container {
+        max-width: initial;
+    }
+}
