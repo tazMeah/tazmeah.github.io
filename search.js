@@ -138,7 +138,7 @@
         books[verseObj.Book] + " " + verseObj.Chapter + ":" + verseObj.Verse;
       console.log(verseNumber);
       verse.innerHTML =
-        `<a href="/bible.html?bookName=${books[verseObj.Book]}&chapter=${verseObj.Chapter}&bookNumber=${verseObj.Book}#v${
+        `<a href="/bible.html?chapter=${verseObj.Chapter}&bookNumber=${verseObj.Book}#v${
           verseObj.Verse
         }" style="text-decoration:none;">` +
         verseNumber.outerHTML +

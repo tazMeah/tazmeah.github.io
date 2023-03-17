@@ -46,9 +46,89 @@ document.querySelector(".container").prepend(header);
 
 
 let versesHTML = "";
+let bookName;
 for (let book of Bible) {
     // if the book number matches what's in the data layer
-    if (book.Book == digitalData.book) {
+    if (book.Book == bookNumber) {
+        if (!bookName) {
+
+            bookName = [
+                ,
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers",
+                "Deuteronomy",
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel",
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles",
+                "2 Chronicles",
+                "Ezra",
+                "Nehemiah",
+                "Esther",
+                "Job",
+                "Psalms",
+                "Proverbs",
+                "Ecclesiastes",
+                "Song of Solomon",
+                "Isaiah",
+                "Jeremiah",
+                "Lamentations",
+                "Ezekiel",
+                "Daniel",
+                "Hosea",
+                "Joel",
+                "Amos",
+                "Obadiah",
+                "Johan",
+                "Micah",
+                "Nahum",
+                "Habakkuk",
+                "Zephaniah",
+                "Haggai",
+                "Zechariah",
+                "Malachi",
+                "Matthew",
+                "Mark",
+                "Luke",
+                "John",
+                "The Acts",
+                "Romans",
+                "1 Corinthians",
+                "2 Corinthians",
+                "Galatians",
+                "Ephesians",
+                "Philippians",
+                "Colossians",
+                "1 Thessalonians",
+                "2 Thessalonians",
+                "1 Timothy",
+                "2 Timothy",
+                "Titus",
+                "Philemon",
+                "Hebrews",
+                "James",
+                "1 Peter",
+                "2 Peter",
+                "1 John",
+                "2 John",
+                "3 John",
+                "Judah",
+                "Revelation",
+              ][book.Book]; 
+              console.log("book name?", bookName);
+        }
+
+        // adding chapter name to the page
+        document.querySelector("h1").innerText = bookName;
+        document.querySelector("h5").innerText = "chapter: " + chapter;
+        document.title = bookName + ": chapter " + chapter; 
+
          // verse links
          let verseLink = `<tr><td class="chapterLinks"><a aria-current="page"  href="/bible.html?bookNumber=${bookNumber}&bookName=${bookName}&chapter=${book.Chapter}">${book.Chapter}</a></td></tr>`;
          if (!versesHTML.includes(verseLink)){
@@ -57,7 +137,7 @@ for (let book of Bible) {
          
 
          // if the book number and chapter number match what's in the data layer
-         if (book.Book == digitalData.book && book.Chapter == digitalData.chapter) {
+         if (book.Book == bookNumber && book.Chapter == chapter) {
             
      
              // verse
@@ -86,7 +166,7 @@ for (let book of Bible) {
 document.querySelector("#chapters tbody").innerHTML = versesHTML;
 
 // current chapter, disable link
-[...document.querySelectorAll(".chapterLinks a")].filter(link => link.innerText == digitalData.chapter)[0].classList.add("current");
+[...document.querySelectorAll(".chapterLinks a")].filter(link => link.innerText == chapter)[0].classList.add("current");
 
 // add favicon
 let favicon = document.createElement("link");

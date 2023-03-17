@@ -19,28 +19,33 @@
         </div>
         <div class="footnotes"></div>
     </div>
+    
+    <script src="../bibleText.js"></script>
     <script>
         let searchParams =  new URLSearchParams(location.search);
-        let bookName = searchParams.get("bookName");
+        // let bookName = searchParams.get("bookName");
         let chapter = searchParams.get("chapter");
         let bookNumber = searchParams.get("bookNumber");
-        let digitalData = {
-            book: bookNumber,
-            bookName: bookName,
-            chapter: chapter,
-        }
-        document.querySelector("h1").innerText = bookName;
-        document.querySelector("h5").innerText = "chapter: " + chapter;
-        document.title = bookName + ": chapter " + chapter; 
+       
+       
 
     </script>
-    <script src="../bibleText.js"></script>
     <script src="../bibleHTML.js"></script>
     <script src="../search.js"></script>
     <script data-role="highlighting">
-        if (location.href.includes("#v")) {
+        if (location.href.includes("#v") && !location.href.includes("__")) {
             let anchorId = window.location.hash;
             document.querySelector(anchorId).classList.add("highlight");
+        }
+        if (location.href.includes("#v") && location.href.includes("__")){
+            let anchorId = window.location.hash.substr(0, window.location.hash.indexOf("__"))
+            document.querySelector(anchorId).classList.add("highlight");
+            let numOfVerses = window.location.hash.substr(window.location.hash.indexOf("__") + 2);
+            for (let i = 0; i < numOfVerses; i++) {
+                let lasttHighlightedElement = document.querySelectorAll(".highlight")[document.querySelectorAll(".highlight").length - 1];
+                let nextHighlightedElement = document.querySelectorAll(".highlight")[document.querySelectorAll(".highlight").length - 1].nextElementSibling;
+                nextHighlightedElement.classList.add("highlight");
+            }
         }
     </script>
 
