@@ -46,6 +46,8 @@
                 let nextHighlightedElement = document.querySelectorAll(".highlight")[document.querySelectorAll(".highlight").length - 1].nextElementSibling;
                 nextHighlightedElement.classList.add("highlight");
             }
+            // scroll to first highlighted element
+            document.querySelector(".highlight").scrollIntoView()
         }
     </script>
 
