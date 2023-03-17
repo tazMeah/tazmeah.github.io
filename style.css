@@ -1,0 +1,111 @@
+body {
+    /*background: #E8EBE6;*/
+}
+
+.verseNumber {
+    color: #dc3545;
+}
+div.footnotes :first-child {
+    border-top: 1px solid #212529;
+    padding-top: 16px;
+}
+#chapters>tbody {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px 12px;
+}
+.chapterLinks {
+    padding-right: 20px;
+   
+}
+.chapterLinks a.current, a.current:hover {
+    color: #212529;
+}
+.chapterLinks a {
+    text-decoration: none;
+    color: #0d6efd;
+}
+.chapterLinks a:hover {
+    cursor: pointer;
+}
+.page {
+    min-height: 80vh;
+    padding:100px 80px;
+    background: #fff;
+    margin: 50px;
+    border-bottom: 2px dashed #E8EBE6;
+}
+.text-indent, .ti {
+    text-indent: 50px;
+}
+.dontRead {
+    speak: none;
+}
+.tableOfContents li {
+   align-items: end;
+   margin-bottom: 7px;
+   
+}
+.tableOfContents .dots {
+   border-bottom: 2px dotted;
+   width: 100%;
+   position:relative;
+   bottom: 5px;
+}
+.pageNumber {
+    text-align: center;
+}
+.tableOfContents a {
+    margin-right: 3px;
+    width: 99vw;
+    overflow: hidden;
+    text-decoration: none;
+}
+.tableOfContents a::after {
+    content: "..........................................................................................................................................................................................................................................................................................";
+    color: rgb(33, 37, 41);
+}
+@media only screen and (min-width: 600px) {
+    .tableOfContents a {
+        white-space: nowrap;
+    }
+}
+.blue {
+    background-color: hsl(196, 100%, 70%);
+}
+.u {text-decoration: underline;}
+.du {text-decoration-line: underline;text-decoration-style: double;}
+.fullCenter {margin: 0 auto; width: 100%;}
+.pl-25 {padding-left: 25px;}
+.ml-75 {margin-left: 75px;}
+.vh{visibility:hidden;}
+.emph {font-size:calc(105%); font-weight:900;}
+.highlight {
+    background-color: #ffe564;
+}
+header {
+    text-align: left;
+}
+
+nav {
+    top: 0;
+   /* position: fixed;*/
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+    max-width: 1320px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;   
+}
+.book h1 {
+    /* margin-top: 130px; */
+}
+.book {
+    margin-bottom:100px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title></title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container pt-3">
+        <div class="book mt-3">
+            <h1></h1>
+            <h5></h5>
+            <table id="chapters" class="mb-3"><tbody></tbody></table>
+            
+        </div>
+        <div class="footnotes"></div>
+    </div>
+    <script>
+        let searchParams =  new URLSearchParams(location.search);
+        let bookName = searchParams.get("bookName");
+        let chapter = searchParams.get("chapter");
+        let bookNumber = searchParams.get("bookNumber");
+        let digitalData = {
+            book: bookNumber,
+            bookName: bookName,
+            chapter: chapter,
+        }
+        document.querySelector("h1").innerText = bookName;
+        document.querySelector("h5").innerText = "chapter: " + chapter;
+        document.title = bookName + ": chapter " + chapter; 
+
+    </script>
+    <script src="../bibleText.js"></script>
+    <script src="../bibleHTML.js"></script>
+    <script src="../search.js"></script>
+    <script data-role="highlighting">
+        if (location.href.includes("#v")) {
+            let anchorId = window.location.hash;
+            document.querySelector(anchorId).classList.add("highlight");
+        }
+    </script>
+
+</body>
+</html>
