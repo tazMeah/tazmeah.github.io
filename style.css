@@ -118,4 +118,9 @@ nav ul {
     .container {
         max-width: initial;
     }
+
+    .m-5.mobile-m-5 {
+        margin: 0 !important;
+        grid-template-columns: 20% 80% !important;
+    }
 }
