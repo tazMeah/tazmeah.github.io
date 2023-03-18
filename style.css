@@ -31,7 +31,7 @@ div.footnotes :first-child {
     cursor: pointer;
 }
 .page {
-    min-height: 80vh;
+    min-height: 100vh;
     padding:100px 80px;
     background: #fff;
     margin: 50px;
