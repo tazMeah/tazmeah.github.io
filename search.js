@@ -85,7 +85,7 @@
     "Joel",
     "Amos",
     "Obadiah",
-    "Johan",
+    "Jonah",
     "Micah",
     "Nahum",
     "Habakkuk",
