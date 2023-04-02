@@ -85,7 +85,7 @@ for (let book of Bible) {
                 "Joel",
                 "Amos",
                 "Obadiah",
-                "Johan",
+                "Jonah",
                 "Micah",
                 "Nahum",
                 "Habakkuk",
