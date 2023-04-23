@@ -67,6 +67,34 @@ div.footnotes :first-child {
     content: "..........................................................................................................................................................................................................................................................................................";
     color: rgb(33, 37, 41);
 }
+table {width: 100%;}
+th {
+    font-weight:normal;
+    text-align: center;
+}
+td {
+    padding-left: 1em;
+}
+table, td, th {
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+.tabernacle {
+    border: 1px solid black;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 10px 30px 10px;
+}
+.tent {
+    border: 1px solid black;
+}
+.tent div:first-child {
+    border-bottom: 1px solid black;
+}
+.tabernacle div:nth-child(2) {margin-top: 15px;}
+.tent div {padding: 10px;}
+
 @media only screen and (min-width: 600px) {
     .tableOfContents a {
         white-space: nowrap;
@@ -124,3 +152,4 @@ nav ul {
         grid-template-columns: 20% 80% !important;
     }
 }
+
