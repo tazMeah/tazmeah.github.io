@@ -29,6 +29,11 @@
                     Vol 4
                 </a>
             </li>
+            <li>
+                <a class="mb-5" href="/popular_verses.html">
+                    Popular Verses
+                </a>
+            </li>
         </ul>
         <form action="/search.html" method="GET"><div class="mt-3 mb-3 input-group"><button id="button-addon1" type="submit" class="btn btn-outline-secondary">Search</button><input id="search" name="search" required="" aria-label="Example text with button addon" aria-describedby="basic-addon1" class="form-control" value=""></div></form>
         </nav>
