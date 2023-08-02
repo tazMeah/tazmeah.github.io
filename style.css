@@ -168,4 +168,8 @@ nav ul {
         border-color: #6c757d;
 
     }
+
+    .chapterLinks a.current {
+        color: #dc3545;
+    }
 }
