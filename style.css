@@ -153,3 +153,10 @@ nav ul {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    body, nav, input {
+        background-color: #202124;
+        color: #bdc1c6;
+    }
+
+}
