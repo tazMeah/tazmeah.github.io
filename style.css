@@ -154,7 +154,7 @@ nav ul {
 }
 
 @media (prefers-color-scheme: dark) {
-    body, nav, .page, #search, div.input-group, tr {
+    body, nav, .page, #search, div.input-group, tr, tr:nth-child(odd) {
         background-color: #202124;
         color: #bdc1c6;
     }
