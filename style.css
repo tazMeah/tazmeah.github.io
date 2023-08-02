@@ -154,13 +154,12 @@ nav ul {
 }
 
 @media (prefers-color-scheme: dark) {
-    body, nav, .page {
+    body, nav, .page, #search, div.input-group, tr {
         background-color: #202124;
         color: #bdc1c6;
     }
 
     #search, div.input-group {
-        background-color: #202124;
         border-color: #6c757d;
     }
 
