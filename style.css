@@ -161,6 +161,7 @@ nav ul {
 
     #search, div.input-group {
         background-color: #303134;
+        border-color: #6c757d;
     }
 
     div.input-group, tbody {
