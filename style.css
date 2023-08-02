@@ -164,7 +164,7 @@ nav ul {
         border-color: #6c757d;
     }
 
-    div.input-group, tbody {
+    div.input-group, tbody, #chapters>tbody {
         border-color: #6c757d;
 
     }
