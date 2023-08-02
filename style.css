@@ -165,8 +165,9 @@ nav ul {
 
     div.input-group, tbody, #chapters>tbody {
         border-color: #6c757d;
-
     }
+
+    .highlight {color: #202124;}
 
     .chapterLinks a.current {
         color: #dc3545;
