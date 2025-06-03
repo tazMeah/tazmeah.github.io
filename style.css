@@ -228,3 +228,22 @@ nav ul {
 .l80 {left:80px;}
 .l90 {left:90px;}
 .l100 {left:100px;}
+
+
+
+.fWidth10 {width: 10%}
+.fWidth20 {width: 20%}
+.fWidth30 {width: 30%}
+.fWidth40 {width: 40%}
+.fWidth50 {width: 50%}
+.fWidth60 {width: 60%}
+.fWidth70 {width: 70%}
+.fWidth80 {width: 80%}
+.fWidth90 {width: 90%}
+.fWidth100 {width: 100%}
+.floatLeft {float: left; margin-right: 20px;}
+.floatRight {float: right; margin-left: 20px;}
+
+@media only screen and (max-width: 1199px) {
+    [class*='fWidth'] {width: 100% !important}
+}
